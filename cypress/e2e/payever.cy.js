@@ -21,7 +21,7 @@ describe(`Should open ${Cypress.env("baseUrl")} and signup Payever app`, () => {
       testName: Cypress.currentTest.title, // The name of the test case
     });
   });
-  it.only("Check create account modal is displayed", () => {
+  it("Check create account modal is displayed", () => {
     LoginFashion.open();
     // cy.visit('https://commerceos.staging.devpayever.com/registration/santander')
     cy.get(LoginFashion.registrationHeader).should(
@@ -35,7 +35,7 @@ describe(`Should open ${Cypress.env("baseUrl")} and signup Payever app`, () => {
     });
     cy.percySnapshot("Login page");
   });
-  it.only("Create account with valid credentials", () => {
+  it("Create account with valid credentials", () => {
     LoginFashion.createAccount(name, lastname, email, pass);
     cy.get(LoginFashion.submitBtn).should("have.text", submitBtnText);
     cy.eyesCheckWindow({
@@ -46,7 +46,7 @@ describe(`Should open ${Cypress.env("baseUrl")} and signup Payever app`, () => {
     });
     cy.percySnapshot("Second page");
   });
-  it.only("Fill out the business information", () => {
+  it("Fill out the business information", () => {
     LoginFashion.fillBusinessInfo(companyName, phone);
     cy.on("uncaught:exception", () => false);
     BusinessPage.clickGetStarted();
