@@ -14,11 +14,11 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import "@applitools/eyes-cypress/commands";
-import "./commands";
-import "cypress-v10-preserve-cookie";
-import "@percy/cypress";
-import "cypress-mochawesome-reporter/register";
+import '@applitools/eyes-cypress/commands'
+import './commands'
+import 'cypress-v10-preserve-cookie'
+import '@percy/cypress'
+import 'cypress-mochawesome-reporter/register'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

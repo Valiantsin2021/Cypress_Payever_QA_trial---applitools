@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./cypress/e2e/*.js",
+    "lint": "eslint ./cypress/e2e/*.js && eslint ./cypress/pageobjects/*.js",
     "format": "prettier --write ."
   },
   "pre-commit": [
@@ -20,7 +20,12 @@
     "@percy/cypress": "^3.1.2",
     "cypress": "^10.11.0",
     "cypress-mochawesome-reporter": "^3.2.3",
-    "cypress-v10-preserve-cookie": "^1.2.1"
+    "cypress-v10-preserve-cookie": "^1.2.1",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-prettier": "^4.2.1"
   },
   "dependencies": {
     "pre-commit": "^1.2.2"
