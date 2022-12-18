@@ -1,24 +1,24 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
     env: {
-      baseUrl: "https://commerceos.staging.devpayever.com/registration/",
-      testAuto: "https://automationintesting.online/"
+      baseUrl: 'https://commerceos.staging.devpayever.com/registration/',
+      testAuto: 'https://automationintesting.online/'
     },
     setupNodeEvents(on, config) {
-      require("cypress-mochawesome-reporter/plugin")(on);
+      require('cypress-mochawesome-reporter/plugin')(on)
     },
-    reporter: "cypress-mochawesome-reporter",
+    reporter: 'cypress-mochawesome-reporter',
     reporterOptions: {
-      reportDir: "cypress/results",
+      reportDir: 'mochawesome-report',
       overwrite: false,
       html: false,
-      json: true,
+      json: true
     },
     video: false,
     screenshotOnRunFailure: true,
-    defaultCommandTimeout: 40000,
-  },
-});
-require("@applitools/eyes-cypress")(module);
+    defaultCommandTimeout: 40000
+  }
+})
+require('@applitools/eyes-cypress')(module)

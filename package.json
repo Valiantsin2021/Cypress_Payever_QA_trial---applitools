@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./cypress/e2e/*.js && eslint ./cypress/pageobjects/*.js",
+    "lint": "eslint ./cypress/**/*.js",
     "format": "prettier --write ."
   },
   "pre-commit": [
@@ -26,7 +26,7 @@
     "eslint-plugin-chai-friendly": "^0.7.2",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.2.1"
-  },
+    },
   "dependencies": {
     "pre-commit": "^1.2.2"
   }
